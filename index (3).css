@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111; /* Dark background taake gradient saaf dikhe */
+}
+
+h1 {
+    font-size: 150px;
+    font-weight: 800;
+    text-transform: uppercase;
+    outline: none;
+    /* Gradient Background Setup */
+    background: linear-gradient(135deg, #4285f4, #34a853, #fbbc05, #ea4335, #4285f4);
+    background-size: 400%; /* Background size ko bara rakha taake wo move ho sake */
+    
+    /* Text ke andar background dikhane ke liye */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Animation apply karna */
+    animation: animate 10s linear infinite;
+}
+
+/* Animation define karna */
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
